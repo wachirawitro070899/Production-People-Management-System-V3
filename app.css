@@ -154,3 +154,15 @@
   body.print-matrix .skill-legend{margin-top:0!important}
   body.print-matrix .skill-matrix-table thead{display:table-header-group!important}
 }
+
+
+/* V312 top print and download toolbar */
+.top-action-toolbar{display:flex;justify-content:flex-end;align-items:center;margin:0 0 10px;padding:10px 12px;background:#fff;border:1px solid #d7e3ef;border-radius:12px;box-shadow:0 3px 14px #16436d10}
+.top-action-buttons{display:flex;flex-wrap:wrap;gap:8px;justify-content:flex-end}
+.top-action-buttons button{min-width:150px}
+.top-action-buttons button[data-action="printSettings"]{background:#174e7e}
+.top-action-buttons button[data-action="printSettings"]::before{content:"🖨 ";}
+.top-action-buttons button[data-action="csv"]::before,.top-action-buttons button[data-action="currentCsv"]::before,.top-action-buttons button[data-action="trainingCsv"]::before,.top-action-buttons button[data-action="matrixCsv"]::before,.top-action-buttons button[data-action="examCsv"]::before,.top-action-buttons button[data-action="sectionCsv"]::before,.top-action-buttons button[data-action="cardCsv"]::before,.top-action-buttons button[data-action="backup"]::before{content:"⬇ ";}
+@media(max-width:700px){.top-action-toolbar{justify-content:stretch}.top-action-buttons{width:100%;display:grid;grid-template-columns:1fr 1fr}.top-action-buttons button{min-width:0;width:100%}}
+@media(max-width:430px){.top-action-buttons{grid-template-columns:1fr}}
+@media print{.top-action-toolbar{display:none!important}}

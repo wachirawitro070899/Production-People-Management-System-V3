@@ -10,3 +10,6 @@ Production People Management System V307
 V308: เพิ่มคำอธิบาย Skill Level 1-5 ใน Section Skill Matrix, Employee Skill Card และงานพิมพ์/PDF
 
 V309: รวมเกณฑ์คะแนนและคำอธิบาย Skill Level 1-5 ไว้ใน Acceptance Criteria แบบคำนวณตามจำนวนหัวข้ออัตโนมัติ
+
+
+V312: ย้ายปุ่มตั้งค่าพิมพ์/บันทึก PDF และดาวน์โหลดข้อมูลไปไว้ด้านบนของทุกหน้ารายงาน โดยเรียงปุ่มพิมพ์ก่อนปุ่มดาวน์โหลด และรองรับหน้าจอมือถือ
