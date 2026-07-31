@@ -8,3 +8,5 @@ Production People Management System V307
 - Skill Card แสดงคะแนนเต็มตามจำนวนหัวข้อจริง
 
 V308: เพิ่มคำอธิบาย Skill Level 1-5 ใน Section Skill Matrix, Employee Skill Card และงานพิมพ์/PDF
+
+V309: รวมเกณฑ์คะแนนและคำอธิบาย Skill Level 1-5 ไว้ใน Acceptance Criteria แบบคำนวณตามจำนวนหัวข้ออัตโนมัติ
