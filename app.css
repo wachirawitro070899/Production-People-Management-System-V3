@@ -51,3 +51,106 @@
 .level-description-grid{display:grid;grid-template-columns:repeat(5,minmax(150px,1fr));gap:8px;margin:10px 0 16px}.level-description-item{border:1px solid #d9e0e7;border-radius:8px;padding:9px 10px;background:#fff;display:flex;flex-direction:column;gap:4px;break-inside:avoid}.level-description-item strong{font-size:12px}.level-description-item span{font-size:11px;line-height:1.35;color:#344054}.level-description-item.lv1{border-left:5px solid #ef4444}.level-description-item.lv2{border-left:5px solid #f97316}.level-description-item.lv3{border-left:5px solid #eab308}.level-description-item.lv4{border-left:5px solid #22c55e}.level-description-item.lv5{border-left:5px solid #3b82f6}@media(max-width:1000px){.level-description-grid{grid-template-columns:1fr 1fr}}@media(max-width:640px){.level-description-grid{grid-template-columns:1fr}}@media print{.level-description-grid{grid-template-columns:repeat(5,1fr);gap:4px}.level-description-item{padding:5px}.level-description-item strong{font-size:9px}.level-description-item span{font-size:8px}}
 
 .criteria-single{grid-template-columns:1fr}.acceptance-table{display:grid;gap:6px;margin-top:6px}.acceptance-head,.acceptance-row{display:grid;grid-template-columns:90px 90px 1fr;gap:10px;align-items:center;padding:8px 10px;border-radius:7px}.acceptance-head{background:#173c63;color:#fff;font-weight:800}.acceptance-row{border:1px solid #d2dde7}.acceptance-row>b{text-align:center;font-size:12px}.acceptance-row>span{background:transparent;color:inherit}.acceptance-row>span strong{font-weight:900}.acceptance-row.lv1{background:#f1f3f5;color:#495057}.acceptance-row.lv2{background:#d9edff;color:#0b5793}.acceptance-row.lv3{background:#d9f7e9;color:#14784b}.acceptance-row.lv4{background:#fff0c7;color:#9a6500}.acceptance-row.lv5{background:#f7d9e5;color:#9e2450}@media(max-width:700px){.acceptance-head{display:none}.acceptance-row{grid-template-columns:90px 1fr}.acceptance-row>span{grid-column:1/-1}}@media print{.acceptance-head,.acceptance-row{-webkit-print-color-adjust:exact;print-color-adjust:exact}}
+
+/* V310 compact print layout: prevent blank first page and keep reports continuous */
+@media print{
+  html,body{height:auto!important;min-height:0!important;overflow:visible!important}
+  #app,main{height:auto!important;min-height:0!important;overflow:visible!important}
+  .matrix-report,.employee-skill-card{
+    display:block!important;
+    height:auto!important;
+    min-height:0!important;
+    max-height:none!important;
+    overflow:visible!important;
+    break-inside:auto!important;
+    page-break-inside:auto!important;
+    border-radius:0!important;
+  }
+  .report-title,.skill-card-banner,.skill-legend{
+    break-after:avoid-page!important;
+    page-break-after:avoid!important;
+  }
+  .skill-table-wrap,.table-wrap{
+    display:block!important;
+    height:auto!important;
+    min-height:0!important;
+    max-height:none!important;
+    overflow:visible!important;
+    padding:0!important;
+  }
+  .skill-matrix-table{
+    width:100%!important;
+    min-width:0!important;
+    table-layout:fixed!important;
+    margin:0!important;
+    break-before:auto!important;
+    page-break-before:auto!important;
+  }
+  .skill-matrix-table thead{display:table-header-group!important}
+  .skill-matrix-table tbody{display:table-row-group!important}
+  .skill-matrix-table tr{break-inside:avoid!important;page-break-inside:avoid!important}
+  .skill-matrix-table th,.skill-matrix-table td{
+    min-width:0!important;
+    width:auto!important;
+    padding:3px 2px!important;
+    font-size:7px!important;
+    line-height:1.15!important;
+    overflow-wrap:anywhere!important;
+  }
+  .skill-matrix-table .emp-col{min-width:0!important;width:16%!important}
+  .skill-matrix-table .avatar{width:24px!important;height:24px!important;font-size:8px!important}
+  .level-box{width:22px!important;height:22px!important;font-size:8px!important}
+  .score-cell{font-size:10px!important}
+  .rank-badge{min-width:0!important;padding:3px 4px!important;font-size:8px!important}
+  .criteria-grid{padding:6px!important;gap:6px!important;break-inside:avoid!important}
+  .criteria-grid>div{padding:6px!important}
+  .acceptance-head,.acceptance-row{padding:4px 6px!important;gap:5px!important;font-size:8px!important;grid-template-columns:58px 58px 1fr!important}
+  .signature-row{padding:7px!important;gap:6px!important;font-size:8px!important;break-inside:avoid!important}
+  .report-title{padding:7px 10px!important;grid-template-columns:42px 1fr auto!important;gap:8px!important}
+  .report-logo{width:34px!important;height:34px!important;border-width:2px!important;font-size:12px!important}
+  .report-title h2{font-size:15px!important}
+  .report-title p{font-size:8px!important}
+  .doc-box{padding:4px 7px!important;font-size:7px!important}
+  .skill-legend{padding:5px 8px!important;gap:4px!important}
+  .skill-legend span{padding:3px 5px!important;font-size:7px!important}
+}
+
+/* V311 repeating Skill Matrix header on every printed page */
+.matrix-print-header{display:none}
+@media print{
+  body.print-matrix .matrix-print-header{
+    display:grid!important;
+    position:fixed;
+    top:-19mm;
+    left:0;
+    right:0;
+    height:16mm;
+    grid-template-columns:12mm 1fr 34mm;
+    align-items:center;
+    gap:3mm;
+    padding:2mm 3mm;
+    border:1px solid #24598f;
+    background:#155a99!important;
+    color:#fff!important;
+    z-index:9999;
+    -webkit-print-color-adjust:exact;
+    print-color-adjust:exact;
+  }
+  body.print-matrix .matrix-print-logo{
+    width:9mm;
+    height:9mm;
+    border:1.2mm solid #fff;
+    border-radius:50%;
+    display:grid;
+    place-items:center;
+    font-size:8pt;
+    font-weight:900;
+  }
+  body.print-matrix .matrix-print-header strong{display:block;font-size:11pt;line-height:1.05}
+  body.print-matrix .matrix-print-header small{display:block;margin-top:1mm;font-size:6.5pt;opacity:.95}
+  body.print-matrix .matrix-print-doc{border:0.3mm solid rgba(255,255,255,.65);padding:1.2mm 2mm;border-radius:1mm;font-size:6pt;line-height:1.35}
+  body.print-matrix .matrix-report>.report-title{display:none!important}
+  body.print-matrix .matrix-report{border:0!important}
+  body.print-matrix .skill-legend{margin-top:0!important}
+  body.print-matrix .skill-matrix-table thead{display:table-header-group!important}
+}
