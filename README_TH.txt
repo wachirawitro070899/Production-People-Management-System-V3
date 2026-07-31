@@ -6,3 +6,5 @@ Production People Management System V307
 - คะแนนต่ำสุดและสูงสุดคำนวณตามจำนวนหัวข้อของแต่ละ Section
 - เกณฑ์ Acceptance ปรับอัตโนมัติตามจำนวนหัวข้อ
 - Skill Card แสดงคะแนนเต็มตามจำนวนหัวข้อจริง
+
+V308: เพิ่มคำอธิบาย Skill Level 1-5 ใน Section Skill Matrix, Employee Skill Card และงานพิมพ์/PDF
