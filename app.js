@@ -50,9 +50,11 @@ function printBtn(){return `<button data-action="printSettings">ตั้งค�
 function downloadBtn(action='currentCsv'){return `<button data-action="${action}">ดาวน์โหลดข้อมูล</button>`}
 function employeeRows(list){return list.map(e=>`<tr><td class="employee-photo-cell"><button type="button" class="avatar-button" data-edit="${esc(e.id)}" title="แก้ไขข้อมูลและรูปภาพ">${avatar(e)}</button></td><td>${esc(e.id)}</td><td>${esc(e.name)}</td><td>${esc(e.phone||'-')}</td><td>${esc(e.section)}</td><td>${esc(e.position)}</td><td>${esc(e.startDate||'-')}</td><td>${esc(age(e.startDate))}</td><td class="no-print"><button type="button" data-edit="${esc(e.id)}" class="secondary edit-employee-btn">แก้ไขข้อมูล / รูป</button> <button type="button" data-delete="${esc(e.id)}" class="danger">ลบ</button></td></tr>`).join('')}
 function dashboard(){
- const order=['manager','engineer','supervisor','leader','technician','operator','other'];
+ const order=['engineer','supervisor','leader','technician','operator','other'];
+ const managers=employees.filter(e=>rank(e.position)==='manager');
+ const managerTop=managers.length?`<div class="division-manager-top"><div class="people">${managers.map(person).join('')}</div><div class="manager-line"></div><h4 class="manager-pill">Manager</h4><div class="manager-line manager-line-bottom"></div></div>`:'';
  const sectionCards=sections.map(s=>{
-  const list=employees.filter(e=>e.section===s);
+  const list=employees.filter(e=>e.section===s&&rank(e.position)!=='manager');
   const levels=order.map(r=>{
    const group=list.filter(e=>rank(e.position)===r);
    return group.length?`<div class="level rank-level-${r}"><h4>${levelName(r)}</h4><div class="people">${group.map(person).join('')}</div></div>`:'';
@@ -60,9 +62,9 @@ function dashboard(){
   return `<section class="division-section"><div class="division-section-head"><h3>${esc(s)}</h3><small>${list.length} Employees</small></div>${levels||'<div class="empty">ไม่มีข้อมูลพนักงาน</div>'}</section>`;
  }).join('');
  const newThisMonth=employees.filter(e=>{const d=new Date(e.startDate),n=new Date();return !Number.isNaN(d.getTime())&&d.getMonth()===n.getMonth()&&d.getFullYear()===n.getFullYear()}).length;
- return head('Production Division Organization Chart','โครงสร้างองค์กรรวมตามมาตรฐานเดียวกับ Section Organization Chart',printBtn())+
+ return head('Production Division Organization Chart','Manager อยู่บนสุดของโครงสร้างองค์กร',printBtn())+
  `<div class="cards"><div class="card metric">พนักงานทั้งหมด<b>${employees.length}</b></div><div class="card metric">Section<b>${sections.length}</b></div><div class="card metric">พนักงานใหม่เดือนนี้<b>${newThisMonth}</b></div><div class="card metric">ผู้ใช้งาน<b>${isAdmin?'Admin':'Viewer'}</b></div></div>`+
- `<div class="division-org"><div class="division-root"><h3>Production Division</h3><small>Manager → Engineer → Supervisor → Leader → Technician → Operator</small></div><div class="division-connector"></div><div class="division-sections">${sectionCards}</div></div>`;
+ `<div class="division-org">${managerTop}<div class="division-sections">${sectionCards}</div></div>`;
 }
 function sectionView(chart=false){const selected=sessionStorage.getItem(chart?'chartSec':'viewSec')||sections[0];const list=employees.filter(e=>e.section===selected);const opts=sections.map(s=>`<option ${s===selected?'selected':''}>${esc(s)}</option>`).join('');let body;if(chart){body=['manager','engineer','supervisor','leader','technician','operator','other'].map(r=>{const a=list.filter(e=>rank(e.position)===r);return a.length?`<div class="level"><h4>${levelName(r)}</h4><div class="people">${a.map(person).join('')}</div></div>`:''}).join('');body=`<div class="panel hierarchy">${body||'<div class="empty">ไม่มีข้อมูล</div>'}</div>`}else body=`<div class="table-wrap"><table><thead><tr><th>รูป</th><th>รหัส</th><th>ชื่อ</th><th>ตำแหน่ง</th><th>วันที่เริ่มงาน</th><th>อายุงาน</th></tr></thead><tbody>${list.map(e=>`<tr><td>${avatar(e)}</td><td>${esc(e.id)}</td><td>${esc(e.name)}</td><td>${esc(e.position)}</td><td>${esc(e.startDate)}</td><td>${esc(age(e.startDate))}</td></tr>`).join('')}</tbody></table></div>`;return head(chart?'Section Organization Chart':'Section View',`${list.length} คน`,printBtn())+`<div class="panel no-print"><label>Section<select id="sectionSelect">${opts}</select></label></div><div style="margin-top:12px">${body}</div>`}
 function search(){return head('Search Employee',`ข้อมูลพนักงาน ${employees.length} คน`,`<button data-action="csv">ดาวน์โหลด CSV</button>${printBtn()}`)+`<div class="panel no-print"><input id="q" placeholder="ค้นหา รหัส ชื่อ Section ตำแหน่ง เบอร์โทร"></div><div class="table-wrap"><table><thead><tr><th>รูป</th><th>รหัส</th><th>ชื่อ</th><th>เบอร์โทร</th><th>Section</th><th>ตำแหน่ง</th><th>วันที่เริ่มงาน</th><th>อายุงาน</th><th class="no-print">จัดการ</th></tr></thead><tbody id="empBody">${employeeRows(employees)}</tbody></table></div>`}
