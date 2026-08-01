@@ -215,3 +215,28 @@
 .stamping-unassigned{margin-top:14px;border:2px dashed #f59e0b}
 @media(max-width:900px){.stamping-shifts{grid-template-columns:1fr;min-width:0}.stamping-shifts:before{display:none}}
 @media print{.stamping-shifts{min-width:0;gap:8px}.stamping-shift{padding:8px}.stamping-group .person{transform:scale(.9);transform-origin:top left}}
+
+/* V313 Stamping machine responsibility infographic */
+.stamping-infographic{background:#fff;border:2px solid #0b3d78;border-radius:14px;overflow:hidden;min-width:1180px;box-shadow:0 4px 16px #0b3d7818}
+.stamp-title{background:linear-gradient(90deg,#082c64,#0e4b8f);color:#fff;text-align:center;font-size:20px;font-weight:900;letter-spacing:.4px;padding:10px}
+.stamp-top{display:flex;flex-direction:column;align-items:center;padding:7px 20px 0;position:relative}
+.stamp-top-role{min-width:275px;min-height:38px;border-radius:7px;background:linear-gradient(90deg,#092e6a,#1256ad);color:#fff;display:flex;align-items:center;justify-content:center;gap:12px;padding:6px 16px;text-align:center;font-weight:900}
+.stamp-top-role small{display:block;font-size:9px;font-weight:500;margin-top:2px;opacity:.95}
+.stamp-role-icon{font-size:24px;color:#fff;line-height:.7}
+.stamp-vertical{height:7px;border-left:2px solid #111}
+.stamp-branch{height:22px;width:48%;border-top:2px solid #111;position:relative;margin-top:8px}
+.stamp-branch:before,.stamp-branch:after{content:"";position:absolute;top:-2px;height:20px;border-left:2px solid #111}.stamp-branch:before{left:0}.stamp-branch:after{right:0}
+.stamp-shifts{display:grid;grid-template-columns:1fr 1fr;gap:22px;padding:0 10px 10px}
+.stamp-info-shift{position:relative;border:2px dashed;border-radius:15px;padding:18px 8px 8px}
+.stamp-info-shift>h3{position:absolute;top:-18px;left:50%;transform:translateX(-50%);margin:0;min-width:145px;color:#fff;padding:6px 18px;border-radius:8px;text-align:center;font-size:18px}
+.stamp-info-shift.shift-a{border-color:#1466c3;background:#fbfdff}.stamp-info-shift.shift-a>h3{background:linear-gradient(90deg,#0d55ae,#176fc9)}
+.stamp-info-shift.shift-b{border-color:#278b35;background:#fbfffb}.stamp-info-shift.shift-b>h3{background:linear-gradient(90deg,#08752d,#159346)}
+.stamp-info-group{display:grid;grid-template-columns:102px 1fr;border:1.5px solid;border-radius:9px;overflow:hidden;margin:8px 0;background:#fff}
+.stamp-group-label{display:flex;flex-direction:column;align-items:center;justify-content:center;color:#fff;text-align:center;padding:7px;font-size:16px}.stamp-group-label small{font-size:12px;margin-top:2px}.stamp-machine-icon{font-size:31px;margin-top:8px}
+.group-a{border-color:#1a62b4}.group-a .stamp-group-label{background:linear-gradient(#1768be,#0d4d9b)}
+.group-b{border-color:#f28a00}.group-b .stamp-group-label{background:linear-gradient(#ff9700,#e87800)}
+.group-c{border-color:#7652b2}.group-c .stamp-group-label{background:linear-gradient(#805fc0,#6742a5)}
+.stamp-group-rows{padding:5px 10px}.stamp-duty-row{display:grid;grid-template-columns:22px 1fr 24px 130px;align-items:center;min-height:29px;border-bottom:1px solid #edf1f5;font-size:12px}.stamp-duty-row:last-child{border-bottom:0}.stamp-person-icon{font-size:19px;color:#145ab1}.group-b .stamp-person-icon{color:#ef7e00}.group-c .stamp-person-icon{color:#7050ad}.support-row{border-top:1px dashed #8b98a7;margin-top:3px;color:#087b2d;font-weight:800}.support-row .stamp-person-icon{color:#15913a}.stamp-duty{font-weight:700}.stamp-duty small{display:block;font-size:8px;font-weight:500;color:#54677a;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:155px}.stamp-arrow{text-align:center;font-weight:900}.stamp-machine{background:#eef5fd;border-radius:4px;padding:4px 6px;text-align:center;font-weight:700}.group-b .stamp-machine{background:#fff0d8}.group-c .stamp-machine{background:#f0ebf9}.support-row .stamp-machine{background:transparent;text-align:left;padding-left:0}
+.stamp-summary{display:grid;grid-template-columns:180px repeat(4,1fr);align-items:stretch;margin:0 14px 12px;border:1.5px solid #123f7b;border-radius:12px;overflow:hidden;text-align:center}.stamp-summary>div{padding:8px 10px;border-right:1px solid #b9c9db;display:flex;align-items:center;justify-content:center;gap:10px}.stamp-summary>div:last-child{border-right:0}.stamp-summary b{display:block}.stamp-summary span{display:block;font-size:12px}.summary-title{background:#0d4c93;color:#fff;font-weight:900}.summary-total{font-size:14px}
+@media(max-width:1200px){.stamping-infographic{min-width:1000px}.stamp-duty-row{grid-template-columns:20px 1fr 20px 110px}}
+@media print{.stamping-infographic{min-width:0!important;box-shadow:none;transform:scale(.86);transform-origin:top left;width:116%;page-break-inside:avoid}.stamp-title,.stamp-top-role,.stamp-info-shift>h3,.stamp-group-label,.summary-title{-webkit-print-color-adjust:exact;print-color-adjust:exact}.stamp-shifts{gap:12px}.stamp-summary{margin-bottom:0}}
