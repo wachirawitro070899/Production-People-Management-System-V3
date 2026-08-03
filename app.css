@@ -254,3 +254,4 @@
 .person-editable:after{content:'✎';position:absolute;right:5px;top:5px;width:22px;height:22px;border-radius:50%;display:grid;place-items:center;background:#fff;color:#1f5684;box-shadow:0 2px 8px rgba(0,0,0,.18);font-size:12px;opacity:.75}
 .person-editable:hover:after{opacity:1}
 @media(max-width:700px){.modal{padding:8px}.modal-card{width:100%;max-height:calc(100vh - 16px);padding:16px}.form-grid{grid-template-columns:1fr}}
+.exam-set-summary{display:flex;justify-content:space-between;gap:12px;padding:14px 16px;border:1px solid #cbd5e1;border-radius:12px;background:#f8fafc}.exam-set-summary span{color:#475569}.exam-question{padding:14px 16px;border:1px solid #dbe3ef;border-radius:12px;background:#fff}.exam-question>b{display:block;margin-bottom:10px}.exam-question label{display:inline-flex;align-items:center;gap:6px;margin-right:20px}
