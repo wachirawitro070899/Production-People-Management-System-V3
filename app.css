@@ -199,7 +199,7 @@
 
 .sorting-unassigned{margin-top:14px;border:2px dashed #d97706;background:#fffbeb}.sorting-unassigned h3{margin-top:0;color:#92400e}.sorting-unassigned .people{justify-content:center}
 
-/* Stamping Shift / Group organization chart */
+/* Stamping Team / Group organization chart */
 .stamping-chart{overflow-x:auto}
 .org-connector{text-align:center;font-size:26px;line-height:1;color:#64748b}
 .stamping-shifts{display:grid;grid-template-columns:1fr 1fr;gap:18px;min-width:980px;position:relative}
