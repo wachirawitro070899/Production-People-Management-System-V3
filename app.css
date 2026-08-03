@@ -243,3 +243,14 @@
 .sync-notice{border:2px solid #1769c2;background:#eef6ff;margin-bottom:14px}.sync-notice h3{margin-top:0;color:#0b4f9c}.sync-notice p{line-height:1.6}.sync-steps{display:grid;gap:8px;padding:12px;border-radius:10px;background:#fff}.sync-steps span,.sync-steps b{display:block}.sync-card{border:2px solid #14833b;background:#f0fff4}.sync-card button{background:#14833b}.sync-card small{display:block;margin-top:10px;line-height:1.45}.import-panel input[type=file]{display:block;width:100%;margin:10px 0;padding:12px;border:2px dashed #1769c2;border-radius:10px;background:#f8fbff}
 
 .person-editable{cursor:pointer;transition:transform .15s ease,box-shadow .15s ease}.person-editable:hover,.person-editable:focus{transform:translateY(-3px);box-shadow:0 8px 20px rgba(16,36,61,.18);outline:2px solid #1f5684;outline-offset:2px}
+
+/* Employee editor modal - V311 */
+.modal{position:fixed;inset:0;z-index:9999;background:rgba(15,35,55,.58);display:flex;align-items:flex-start;justify-content:center;padding:24px;overflow:auto}
+.modal.hidden{display:none!important}
+.modal-card{position:relative;width:min(920px,96vw);max-height:calc(100vh - 48px);overflow:auto;background:#fff;border-radius:16px;padding:24px;box-shadow:0 24px 70px rgba(0,0,0,.3);margin:auto}
+.modal-card .close{position:sticky;float:right;top:0;z-index:2;width:38px;height:38px;padding:0;border-radius:50%;font-size:24px;background:#edf2f7;color:#20364d}
+.person-editable,.person-editable *{cursor:pointer}
+.person-editable{position:relative}
+.person-editable:after{content:'✎';position:absolute;right:5px;top:5px;width:22px;height:22px;border-radius:50%;display:grid;place-items:center;background:#fff;color:#1f5684;box-shadow:0 2px 8px rgba(0,0,0,.18);font-size:12px;opacity:.75}
+.person-editable:hover:after{opacity:1}
+@media(max-width:700px){.modal{padding:8px}.modal-card{width:100%;max-height:calc(100vh - 16px);padding:16px}.form-grid{grid-template-columns:1fr}}
