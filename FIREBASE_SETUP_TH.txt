@@ -1,0 +1,16 @@
+PPMS V314 - ตั้งค่า Firebase เพื่อให้ทุกเครื่องเห็นรูปพนักงาน
+
+1. เข้า https://console.firebase.google.com/ และสร้าง Project
+2. ไปที่ Build > Realtime Database > Create Database
+3. เลือก Start in test mode สำหรับการทดสอบเบื้องต้น
+4. ไปที่ Project settings > Your apps > Web app (ไอคอน </>)
+5. คัดลอก firebaseConfig
+6. เปิดไฟล์ firebase-config.js แล้วนำค่ามาใส่แทนช่องว่าง
+7. อัปโหลดไฟล์ทั้งหมดขึ้น GitHub Repository แล้วรอ GitHub Pages อัปเดต
+8. เปิดเว็บจากเครื่องหลัก ระบบจะนำข้อมูลและรูปปัจจุบันขึ้น Firebase อัตโนมัติ
+9. เปิดเว็บจากเครื่องอื่นและกด Ctrl+F5 ทุกเครื่องจะเห็นรูปเดียวกัน
+
+หมายเหตุด้านความปลอดภัย
+- Test mode ใช้เพื่อทดสอบเท่านั้นและมีกำหนดหมดอายุ
+- ก่อนใช้งานจริงควรเปิด Firebase Authentication และตั้ง Database Rules ให้เฉพาะ Admin เขียนข้อมูลได้
+- ไฟล์ firebaseConfig ไม่ใช่รหัสผ่าน แต่ Database Rules ต้องตั้งให้ปลอดภัย
