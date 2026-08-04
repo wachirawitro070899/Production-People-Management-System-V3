@@ -474,3 +474,53 @@ header .logo img{display:block;width:56px;height:56px;object-fit:contain}
 .logo img,.report-logo img,.wallet-logo img{display:block;width:100%;height:100%;object-fit:contain;border-radius:inherit}
 .logo{overflow:hidden;background:#fff}
 .report-logo,.wallet-logo{overflow:hidden;background:#fff}
+
+/* V405 - unify front/back JR logo and improve score readability */
+.wallet-banner .wallet-logo,
+.wallet-back-title .wallet-logo{
+  width:9mm!important;
+  height:9mm!important;
+  border:0!important;
+  border-radius:0!important;
+  background:transparent!important;
+  padding:0!important;
+  overflow:visible!important;
+  display:flex!important;
+  align-items:center!important;
+  justify-content:center!important;
+}
+.wallet-banner .wallet-logo img,
+.wallet-back-title .wallet-logo img{
+  display:block!important;
+  width:100%!important;
+  height:100%!important;
+  object-fit:contain!important;
+}
+.wallet-person h2{
+  color:#082d52!important;
+}
+.wallet-main{
+  grid-template-columns:18mm minmax(0,1fr) 18.5mm!important;
+  gap:2.3mm!important;
+}
+.wallet-score{
+  width:13.5mm!important;
+  height:13.5mm!important;
+  border-width:1.35mm!important;
+  box-sizing:border-box!important;
+  line-height:1!important;
+}
+.wallet-score small{
+  font-size:1.65mm!important;
+  line-height:1!important;
+  margin-bottom:.25mm!important;
+}
+.wallet-score b{
+  font-size:5.6mm!important;
+  line-height:.9!important;
+}
+.wallet-score span{
+  font-size:1.75mm!important;
+  line-height:1!important;
+  margin-top:.25mm!important;
+}
