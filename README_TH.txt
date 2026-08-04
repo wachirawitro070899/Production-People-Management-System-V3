@@ -31,3 +31,10 @@ V312: ย้ายปุ่มตั้งค่าพิมพ์/บันท�
 6) เครื่องอื่นเปิดเว็บใหม่แล้วกด Ctrl+F5
 
 หมายเหตุ: GitHub Pages ไม่สามารถเขียนข้อมูลกลับไปที่ Repository อัตโนมัติได้ จึงต้องเผยแพร่ employees-data.js หลังแก้ไขข้อมูลหรือรูปครั้งใหญ่
+
+V318 - Skill Matrix Baseline / Quarterly Update
+- Login Admin แล้วเข้า Section Skill Matrix
+- กด "อัปเดต Skill ปัจจุบัน" หรือคลิกเลข Level ในตาราง
+- เลือก Baseline เพื่อบันทึกระดับปัจจุบันก่อนเริ่มรอบใหม่
+- ไตรมาสถัดไปเลือก Quarterly Skill Adjustment หลัง Examination + OJT + Job Observation
+- ระบบคำนวณ Score/Acceptance และบันทึกวันที่ ผู้ประเมิน เหตุผล และประวัติเดิม/ใหม่

@@ -255,3 +255,19 @@
 .person-editable:hover:after{opacity:1}
 @media(max-width:700px){.modal{padding:8px}.modal-card{width:100%;max-height:calc(100vh - 16px);padding:16px}.form-grid{grid-template-columns:1fr}}
 .exam-set-summary{display:flex;justify-content:space-between;gap:12px;padding:14px 16px;border:1px solid #cbd5e1;border-radius:12px;background:#f8fafc}.exam-set-summary span{color:#475569}.exam-question{padding:14px 16px;border:1px solid #dbe3ef;border-radius:12px;background:#fff}.exam-question>b{display:block;margin-bottom:10px}.exam-question label{display:inline-flex;align-items:center;gap:6px;margin-right:20px}
+
+/* V318 Skill Matrix baseline and quarterly update */
+.skill-cell-btn{border:1px solid rgba(0,0,0,.08);cursor:pointer;font:inherit;padding:0;transition:transform .12s,box-shadow .12s}
+.skill-cell-btn:hover{transform:scale(1.08);box-shadow:0 2px 8px rgba(0,0,0,.18)}
+.skill-updated{margin-top:3px;color:#44657f!important;font-size:9px!important}
+.matrix-filter{display:flex;align-items:end;gap:18px;flex-wrap:wrap}
+.matrix-guidance{flex:1;min-width:360px;padding:9px 12px;border-radius:8px;background:#eef6ff;color:#173d64;font-size:12px}
+.skill-update-form{display:grid;gap:14px}
+.skill-update-meta{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
+.skill-update-form label{display:grid;gap:5px;font-weight:700;color:#183b60}
+.skill-update-form input,.skill-update-form select,.skill-update-form textarea{width:100%;box-sizing:border-box;padding:9px;border:1px solid #bed0e0;border-radius:7px;background:#fff}
+.skill-level-editor{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px;max-height:42vh;overflow:auto;padding:8px;border:1px solid #d6e2ed;border-radius:9px;background:#f7fbff}
+.skill-level-editor label{grid-template-columns:1fr 120px;align-items:center;padding:8px;background:#fff;border-radius:7px;border:1px solid #e1e9f0}
+.skill-level-editor label.focus-skill{outline:2px solid #2769a8;background:#edf6ff}
+@media(max-width:700px){.skill-update-meta,.skill-level-editor{grid-template-columns:1fr}.matrix-guidance{min-width:100%}}
+@media print{.skill-cell-btn{border:0;box-shadow:none;cursor:default}.skill-updated{display:none}}
