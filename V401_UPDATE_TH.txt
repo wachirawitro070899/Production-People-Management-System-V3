@@ -1,0 +1,8 @@
+PPMS V401 Firebase Live Sync
+
+- เชื่อม Firebase Realtime Database ของโปรเจกต์ JRTL-Organization แล้ว
+- Database: wachirawit-c8582-default-rtdb (Singapore)
+- ซิงก์ข้อมูลพนักงาน รูปพนักงาน Skill Matrix การสอบ และการจัดเครื่องจักร
+- รูปถูกย่อก่อนบันทึกเป็น Base64 ใน Realtime Database
+- เปิดเว็บจากเครื่องหลักที่มีรูปครบก่อน เพื่ออัปโหลดข้อมูลครั้งแรก
+- หลังอัปโหลดขึ้น GitHub ให้กด Ctrl+F5
