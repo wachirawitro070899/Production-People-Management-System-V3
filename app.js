@@ -293,6 +293,39 @@ function printSettings(){
 function employeeExportRows(list=employees){return list.map(e=>({ID:e.id,Name:e.name,ThaiName:e.thaiName||'',Phone:e.phone||'',Section:e.section,Position:e.position,StartDate:e.startDate||'',Contract:e.contractType||'',Team:e.shift||''}))}
 function skillExportRows(list=employees){return list.map(e=>{const skills=skillsFor(e.section),row={ID:e.id,Name:e.name,Section:e.section,Position:e.position};skills.forEach(k=>row[k]=skillValue(e,k));row.Score=skillScore(e,skills);row.Acceptance=acceptance(row.Score,skills.length).label;return row})}
 function excelSafe(v){return String(v??'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;')}
+
+async function matrixPdfDownload(){
+ const report=document.querySelector('.matrix-report');
+ if(!report)return alert('ไม่พบข้อมูล Skill Matrix');
+ if(typeof html2canvas==='undefined'||!window.jspdf){return alert('ไม่สามารถโหลดระบบสร้าง PDF ได้ กรุณาเชื่อมต่ออินเทอร์เน็ตแล้วลองใหม่');}
+ const selected=sessionStorage.getItem('matrixSec')||sections[0];
+ status('กำลังสร้างไฟล์ PDF...');
+ try{
+  const canvas=await html2canvas(report,{scale:2,useCORS:true,backgroundColor:'#ffffff',logging:false,ignoreElements:el=>el.classList&&el.classList.contains('no-print')});
+  const {jsPDF}=window.jspdf;
+  const pdf=new jsPDF({orientation:'landscape',unit:'mm',format:'a3',compress:true});
+  const pageW=pdf.internal.pageSize.getWidth(),pageH=pdf.internal.pageSize.getHeight();
+  const margin=6,usableW=pageW-margin*2,usableH=pageH-margin*2;
+  const imgW=usableW,imgH=canvas.height*imgW/canvas.width;
+  const pageCanvas=document.createElement('canvas');
+  const pxPerMm=canvas.width/imgW;
+  const slicePx=Math.floor(usableH*pxPerMm);
+  let y=0,page=0;
+  while(y<canvas.height){
+   const h=Math.min(slicePx,canvas.height-y);
+   pageCanvas.width=canvas.width;pageCanvas.height=h;
+   const ctx=pageCanvas.getContext('2d');ctx.fillStyle='#fff';ctx.fillRect(0,0,pageCanvas.width,pageCanvas.height);ctx.drawImage(canvas,0,y,canvas.width,h,0,0,canvas.width,h);
+   const sliceH=h/pxPerMm;
+   if(page>0)pdf.addPage('a3','landscape');
+   pdf.addImage(pageCanvas.toDataURL('image/jpeg',0.92),'JPEG',margin,margin,imgW,sliceH,undefined,'FAST');
+   y+=h;page++;
+  }
+  const safe=selected.replace(/[^A-Za-z0-9ก-๙_-]+/g,'_');
+  pdf.save(`Skill_Matrix_${safe}.pdf`);
+  status('ดาวน์โหลด PDF แล้ว','ok');
+ }catch(err){console.error(err);alert('สร้าง PDF ไม่สำเร็จ: '+err.message);status('สร้าง PDF ไม่สำเร็จ','error')}
+}
+
 function matrixExcelDownload(){
  const selected=sessionStorage.getItem('matrixSec')||sections[0],skills=skillsFor(selected),list=employees.filter(e=>e.section===selected);
  const headers=['No.','Emp.ID','Name','Position',...skills,'Score','Acceptance','Last Update','Quarter','Evaluator'];
@@ -314,7 +347,7 @@ function currentRows(){
 document.addEventListener('click',e=>{
  const b=e.target.closest('[data-action]');if(!b)return;const a=b.dataset.action;
  if(a==='printSettings'){e.preventDefault();printSettings()}
- if(a==='matrixPdf'){e.preventDefault();printSettings()}
+ if(a==='matrixPdf'){e.preventDefault();matrixPdfDownload()}
  if(a==='matrixExcel'){e.preventDefault();matrixExcelDownload()}
  if(a==='currentCsv'){e.preventDefault();dl(`${current}_Data.csv`,csv(currentRows()),'text/csv;charset=utf-8');status('ดาวน์โหลดข้อมูลแล้ว')}
  if(a==='sectionCsv'){e.preventDefault();const sec=sessionStorage.getItem('viewSec')||sections[0];dl(`${sec}_Employees.csv`,csv(employeeExportRows(employees.filter(x=>x.section===sec))),'text/csv;charset=utf-8')}
