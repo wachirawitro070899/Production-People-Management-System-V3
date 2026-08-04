@@ -1,0 +1,11 @@
+V326 ADMIN LOCKED EMPLOYEE EXAMINATION
+
+- หน้าเริ่มต้นแสดงเฉพาะ Employee Examination
+- ผู้ใช้งานทั่วไปไม่เห็นเมนู Dashboard, Employee, Skill Matrix, History หรือ Export
+- ต้องกด Admin Login และกรอกรหัส Admin จึงเข้าหน้าจัดการได้
+- Logout แล้วระบบกลับสู่หน้า Examination ทันที
+- ลิงก์หลักและ ?exam=1 เปิดหน้า Examination สำหรับพนักงาน
+- ประวัติการสอบและข้อมูลจัดการเข้าถึงได้เฉพาะ Admin
+
+รหัส Admin เริ่มต้น: 1234
+ควรเปลี่ยนรหัสใน app.js ก่อนนำไปใช้งานจริง
