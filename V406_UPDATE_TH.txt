@@ -1,0 +1,5 @@
+V406 Section Skill Matrix Logo Stable
+- แก้โลโก้ Section Skill Matrix ที่แสดงเป็นวงกลมขาว
+- ฝังโลโก้ JR สีแดงใน HTML ที่สร้างจาก JavaScript โดยตรง
+- ใช้โลโก้เดียวกันทั้งหน้าจอ งานพิมพ์ และ PDF
+- อัปเดต cache version เป็น 406

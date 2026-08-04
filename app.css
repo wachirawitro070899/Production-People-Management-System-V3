@@ -524,3 +524,9 @@ header .logo img{display:block;width:56px;height:56px;object-fit:contain}
   line-height:1!important;
   margin-top:.25mm!important;
 }
+
+
+/* V406 - reliable JR logo in Section Skill Matrix */
+.report-logo img,.matrix-print-logo img{display:block;width:100%;height:100%;object-fit:contain;border-radius:50%;}
+.report-logo,.matrix-print-logo{background:#fff;overflow:hidden;}
+body.print-matrix .matrix-print-logo{padding:.35mm;box-sizing:border-box;}
