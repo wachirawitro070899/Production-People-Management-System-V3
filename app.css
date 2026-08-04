@@ -555,3 +555,32 @@ body.print-matrix .matrix-print-logo{padding:.35mm;box-sizing:border-box;}
     print-color-adjust:exact!important;
   }
 }
+
+/* V408 - back Skill Level card uses the same white circular JR logo as the front */
+.wallet-back-title .wallet-logo{
+  width:9.4mm!important;
+  height:9.4mm!important;
+  border:.7mm solid #fff!important;
+  border-radius:50%!important;
+  background:#fff!important;
+  padding:.45mm!important;
+  overflow:hidden!important;
+  box-shadow:0 0 0 .15mm rgba(255,255,255,.35)!important;
+  display:flex!important;
+  align-items:center!important;
+  justify-content:center!important;
+  box-sizing:border-box!important;
+}
+.wallet-back-title .wallet-logo img{
+  width:100%!important;
+  height:100%!important;
+  object-fit:contain!important;
+  border-radius:50%!important;
+  display:block!important;
+}
+@media print{
+  .wallet-back-title .wallet-logo{
+    -webkit-print-color-adjust:exact!important;
+    print-color-adjust:exact!important;
+  }
+}
