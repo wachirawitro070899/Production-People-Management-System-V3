@@ -1,0 +1,7 @@
+V407 - Competency Card White Logo Border
+
+- เพิ่มขอบวงกลมสีขาวรอบโลโก้ JR บน Employee Competency Card
+- ทำให้โลโก้ด้านหน้าและด้านหลังใช้รูปแบบเดียวกับ Section Skill Matrix
+- ปรับขนาดและระยะขอบให้เหมาะกับบัตรขนาด CR80
+- รองรับหน้าจอ PDF และงานพิมพ์
+- อัปเดต Cache Version เป็น V407

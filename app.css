@@ -530,3 +530,28 @@ header .logo img{display:block;width:56px;height:56px;object-fit:contain}
 .report-logo img,.matrix-print-logo img{display:block;width:100%;height:100%;object-fit:contain;border-radius:50%;}
 .report-logo,.matrix-print-logo{background:#fff;overflow:hidden;}
 body.print-matrix .matrix-print-logo{padding:.35mm;box-sizing:border-box;}
+
+/* V407 - Competency Card JR logo with white circular border */
+.wallet-banner .wallet-logo{
+  width:9.4mm!important;
+  height:9.4mm!important;
+  border:.7mm solid #fff!important;
+  border-radius:50%!important;
+  background:#fff!important;
+  padding:.45mm!important;
+  overflow:hidden!important;
+  box-shadow:0 0 0 .15mm rgba(255,255,255,.35)!important;
+}
+.wallet-banner .wallet-logo img{
+  width:100%!important;
+  height:100%!important;
+  object-fit:contain!important;
+  border-radius:50%!important;
+  display:block!important;
+}
+@media print{
+  .wallet-banner .wallet-logo{
+    -webkit-print-color-adjust:exact!important;
+    print-color-adjust:exact!important;
+  }
+}
