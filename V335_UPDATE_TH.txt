@@ -1,0 +1,9 @@
+V335 Visible Report Controls
+
+แก้ไข:
+- เปลี่ยน cache version ของ app.js และ app.css เป็น v=335
+- บังคับให้แถบปุ่มรายงานแสดงในโหมด Admin
+- Section Skill Matrix: ตั้งค่าพิมพ์ / PDF / Excel / อัปเดต Skill ปัจจุบัน
+- Employee Skill Card: ตั้งค่าพิมพ์ / PDF / Excel / PDF 10 ใบต่อ A4
+- Organization Chart: ตั้งค่าพิมพ์ / PDF / Excel
+- ไม่คืนปุ่มดาวน์โหลดข้อมูล
