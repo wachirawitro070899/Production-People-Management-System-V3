@@ -1,0 +1,6 @@
+V329 Employee Skill Card Print Match Web
+
+- Employee Skill Card PDF uses A4 landscape.
+- Print layout matches the web card layout.
+- Keeps colors, employee photo, score circle, level descriptions, progress bars and signatures.
+- Removes browser UI from direct PDF download.

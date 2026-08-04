@@ -1,0 +1,8 @@
+V332 PDF & Excel Only - All Reports
+
+- Section Skill Matrix: เหลือเฉพาะ ดาวน์โหลด PDF และ ดาวน์โหลด Excel
+- Employee Skill Card: เหลือเฉพาะ ดาวน์โหลด PDF และ ดาวน์โหลด Excel
+- Production Division Organization Chart: เหลือเฉพาะ ดาวน์โหลด PDF และ ดาวน์โหลด Excel
+- Section Organization Chart: เหลือเฉพาะ ดาวน์โหลด PDF และ ดาวน์โหลด Excel
+- นำปุ่ม ตั้งค่าพิมพ์/บันทึก PDF, ดาวน์โหลดข้อมูล, PDF 10 ใบ/A4 และอัปเดต Skill ปัจจุบัน ออกจากหัวรายงาน
+- ยังสามารถปรับ Skill โดยคลิกตัวเลข Level ในตารางได้
