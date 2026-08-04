@@ -38,3 +38,10 @@ V318 - Skill Matrix Baseline / Quarterly Update
 - เลือก Baseline เพื่อบันทึกระดับปัจจุบันก่อนเริ่มรอบใหม่
 - ไตรมาสถัดไปเลือก Quarterly Skill Adjustment หลัง Examination + OJT + Job Observation
 - ระบบคำนวณ Score/Acceptance และบันทึกวันที่ ผู้ประเมิน เหตุผล และประวัติเดิม/ใหม่
+
+
+V319 - Skill Matrix PDF / Excel
+- หน้า Section Skill Matrix มีปุ่ม ดาวน์โหลด PDF
+- ปุ่ม PDF เปิดหน้าต่างพิมพ์เพื่อเลือก Save as PDF
+- หน้า Section Skill Matrix มีปุ่ม ดาวน์โหลด Excel (.xls)
+- Excel ส่งออกเฉพาะ Section ที่เลือก พร้อม Skill, Score, Acceptance และข้อมูลการอัปเดต
