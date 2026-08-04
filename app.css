@@ -399,3 +399,73 @@ body.exam-only-mode .top-action-toolbar{display:none!important}
 .support-row .stamp-machine-box{background:#edf9f1;border-color:#bfe3cb}.support-row .stamp-machine-box b{color:#087b2d}
 @media(max-width:1200px){.stamp-duty-card{grid-template-columns:52px minmax(130px,1fr) 125px;gap:7px}.stamp-assignee-photo .avatar,.stamp-assignee-photo .avatar-lg{width:44px;height:44px;min-width:44px}}
 @media print{.stamp-duty-card{break-inside:avoid;min-height:68px}.stamp-duty-card.assigned-person:hover{background:#fff;box-shadow:none}}
+
+/* V402 - Competency card graphic refinement */
+.wallet-banner{
+  grid-template-columns:12mm minmax(0,1fr) auto!important;
+  gap:2.8mm!important;
+  padding-left:3.2mm!important;
+  padding-right:3mm!important;
+}
+.wallet-banner .wallet-logo{
+  width:9mm!important;
+  height:9mm!important;
+  background:#fff!important;
+  color:#d71920!important;
+  border:1.2mm solid #d71920!important;
+  font-size:3.5mm!important;
+  flex:none!important;
+}
+.wallet-banner>div:nth-child(2){
+  min-width:0!important;
+  padding-left:.5mm!important;
+}
+.wallet-banner strong{
+  font-size:3.75mm!important;
+  line-height:1.03!important;
+  letter-spacing:.05mm!important;
+  white-space:normal!important;
+  overflow-wrap:normal!important;
+}
+.wallet-banner small{
+  margin-top:.6mm!important;
+  font-size:2.05mm!important;
+  white-space:nowrap!important;
+}
+.wallet-person h2{
+  color:#d71920!important;
+  font-size:3.8mm!important;
+  font-weight:900!important;
+  padding-right:.5mm!important;
+}
+.wallet-main{
+  grid-template-columns:18mm minmax(0,1fr) 16mm!important;
+  gap:2.7mm!important;
+}
+@media print{
+  .wallet-banner .wallet-logo,
+  .wallet-person h2{
+    -webkit-print-color-adjust:exact!important;
+    print-color-adjust:exact!important;
+  }
+}
+
+
+/* V403 - Official JR logo and Section-based Employee Skill Card view */
+header .logo{border:0!important;border-radius:0!important;background:transparent!important;display:flex!important;align-items:center!important;justify-content:center!important;padding:0!important}
+header .logo img{display:block;width:56px;height:56px;object-fit:contain}
+.wallet-logo{border:0!important;background:#fff!important;overflow:hidden!important;padding:.6mm!important;display:flex!important;align-items:center!important;justify-content:center!important}
+.wallet-logo img{width:100%!important;height:100%!important;object-fit:contain!important;display:block!important}
+.wallet-person h2{color:#082d52!important}
+.wallet-banner{height:13.4mm!important;padding-top:1.5mm!important;padding-bottom:1.5mm!important}
+.wallet-banner>div:nth-child(2){align-self:center!important;display:flex!important;flex-direction:column!important;justify-content:center!important;min-height:9.5mm!important;overflow:visible!important}
+.wallet-banner strong{line-height:1.05!important}
+.wallet-banner small{display:block!important;line-height:1.25!important;margin-top:.7mm!important;padding-bottom:.25mm!important;overflow:visible!important}
+.card-filter-section{max-width:760px!important;display:grid!important;grid-template-columns:minmax(220px,1fr) minmax(280px,1.4fr)!important;gap:12px!important;align-items:end!important}
+.card-filter-section .modal-note{grid-column:1/-1;margin:0!important}
+.wallet-section-view{display:grid!important;grid-template-columns:repeat(auto-fit,minmax(340px,1fr))!important;gap:24px!important;align-items:start!important;justify-items:center!important}
+.wallet-employee-pair{display:flex;flex-direction:column;gap:10px;align-items:center;background:#fff;border:1px solid #d7e3ef;border-radius:14px;padding:12px;box-shadow:0 4px 14px rgba(16,57,91,.08)}
+.wallet-pair-label{width:100%;font-weight:800;color:#174f88;text-align:center;font-size:13px;padding:3px 6px}
+.wallet-section-view .wallet-card{box-shadow:0 4px 14px rgba(0,45,85,.12)}
+@media(max-width:800px){.card-filter-section{grid-template-columns:1fr!important}.wallet-section-view{grid-template-columns:1fr!important}.brand .logo img{width:48px;height:48px}}
+@media print{header .logo img,.wallet-logo img{-webkit-print-color-adjust:exact!important;print-color-adjust:exact!important}.wallet-pair-label{display:none!important}.wallet-employee-pair{border:0!important;box-shadow:none!important;padding:0!important;background:transparent!important}}

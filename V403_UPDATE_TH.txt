@@ -1,0 +1,7 @@
+V403 JR Logo and Section Skill Card
+- ใช้โลโก้ JR สีแดงอย่างเป็นทางการบนหน้าเว็บหลักและ Employee Competency Card
+- ชื่อพนักงานกลับเป็นสีน้ำเงินเดิม
+- แก้ Production Division ให้แสดงครบไม่ถูกตัด
+- Employee Skill Card เลือก Section ก่อน แล้วเลือกดูรายบุคคลหรือทั้งหมดใน Section ได้
+- ดาวน์โหลด PDF เมื่อดูทั้ง Section จะใช้รูปแบบ 10 ใบต่อ A4
+- Excel รองรับทั้งรายบุคคลและทั้ง Section
