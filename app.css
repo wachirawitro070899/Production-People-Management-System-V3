@@ -374,3 +374,28 @@ body.exam-only-mode .exam-login-panel, body.exam-only-mode .panel { border-radiu
 .top-action-buttons{display:flex!important;flex-wrap:wrap!important;gap:8px!important;visibility:visible!important;opacity:1!important}
 .top-action-buttons>button{display:inline-flex!important;align-items:center!important;justify-content:center!important;visibility:visible!important;opacity:1!important;min-height:40px!important}
 body.exam-only-mode .top-action-toolbar{display:none!important}
+
+/* V336: Stamping machine assignment with employee photos */
+.stamp-duty-card{display:grid;grid-template-columns:58px minmax(150px,1fr) 150px;gap:10px;align-items:center;min-height:76px;padding:7px 8px;border-bottom:1px solid #dce6f1;background:#fff;transition:.15s ease}
+.stamp-duty-card:last-child{border-bottom:0}
+.stamp-duty-card.assigned-person{cursor:pointer}
+.stamp-duty-card.assigned-person:hover{background:#f4f9ff;box-shadow:inset 3px 0 #1f6fc2}
+.stamp-assignee-photo{display:flex;justify-content:center;align-items:center}
+.stamp-assignee-photo .avatar,.stamp-assignee-photo .avatar-lg{width:50px;height:50px;min-width:50px;border-radius:50%;object-fit:cover;border:2px solid #fff;box-shadow:0 0 0 2px #2b71b8;background:#e9f1fa;font-size:18px}
+.group-b .stamp-assignee-photo .avatar{box-shadow:0 0 0 2px #ef8b00}
+.group-c .stamp-assignee-photo .avatar{box-shadow:0 0 0 2px #7755b7}
+.support-row .stamp-assignee-photo .avatar{box-shadow:0 0 0 2px #15913a}
+.stamp-empty-avatar{display:flex;align-items:center;justify-content:center;color:#708090;background:#edf2f7!important}
+.stamp-assignee-info{min-width:0;display:flex;flex-direction:column;line-height:1.25}
+.stamp-role-name{font-size:11px;color:#1d5e9f;margin-bottom:3px}
+.group-b .stamp-role-name{color:#d36c00}.group-c .stamp-role-name{color:#6542a3}.support-row .stamp-role-name{color:#087b2d}
+.stamp-assignee-info strong{font-size:11px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;color:#102a43}
+.stamp-assignee-info small{font-size:9px;color:#60758a;margin-top:2px}
+.stamp-vacant-text{color:#8a98a8!important;font-weight:600!important}
+.stamp-machine-box{background:#eaf3fc;border:1px solid #c9ddf1;border-radius:8px;padding:8px 6px;text-align:center;display:flex;flex-direction:column;justify-content:center;min-height:48px}
+.stamp-machine-box small{font-size:8px;color:#5d7185;margin-bottom:3px}.stamp-machine-box b{font-size:12px;color:#0e3f72}
+.group-b .stamp-machine-box{background:#fff2df;border-color:#f7d39f}.group-b .stamp-machine-box b{color:#9c5000}
+.group-c .stamp-machine-box{background:#f2edf9;border-color:#d9cbed}.group-c .stamp-machine-box b{color:#56358f}
+.support-row .stamp-machine-box{background:#edf9f1;border-color:#bfe3cb}.support-row .stamp-machine-box b{color:#087b2d}
+@media(max-width:1200px){.stamp-duty-card{grid-template-columns:52px minmax(130px,1fr) 125px;gap:7px}.stamp-assignee-photo .avatar,.stamp-assignee-photo .avatar-lg{width:44px;height:44px;min-width:44px}}
+@media print{.stamp-duty-card{break-inside:avoid;min-height:68px}.stamp-duty-card.assigned-person:hover{background:#fff;box-shadow:none}}
