@@ -1,0 +1,7 @@
+V327 Visible Admin Login 7533
+
+- เพิ่มปุ่ม Admin Login มุมขวาบนของหน้า Employee Examination
+- พนักงานยังเห็นเฉพาะหน้าสอบเท่านั้น
+- เปลี่ยนรหัส Admin เป็น 7533
+- Login สำเร็จจึงเห็น Dashboard และเมนูผู้ดูแลทั้งหมด
+- Logout แล้วกลับมาหน้าสอบทันที

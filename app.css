@@ -308,7 +308,35 @@
 }
 
 /* V324 Employee Examination only link */
-body.exam-only-mode > header, body.exam-only-mode > nav { display:none !important; }
+body.exam-only-mode > nav { display:none !important; }
+body.exam-only-mode > header {
+  display:flex !important;
+  position:fixed;
+  top:14px;
+  right:18px;
+  left:auto;
+  width:auto;
+  padding:0;
+  border:0;
+  background:transparent;
+  box-shadow:none;
+  z-index:1000;
+}
+body.exam-only-mode > header .brand,
+body.exam-only-mode > header #modeBadge { display:none !important; }
+body.exam-only-mode > header .auth { display:flex !important; }
+body.exam-only-mode > header #loginBtn {
+  display:inline-flex !important;
+  align-items:center;
+  gap:6px;
+  padding:10px 16px;
+  border-radius:10px;
+  background:#174f82;
+  color:#fff;
+  box-shadow:0 4px 14px rgba(23,79,130,.22);
+}
+body.exam-only-mode > header #loginBtn::before { content:'🔒'; }
+body.exam-only-mode > header #logoutBtn { display:none !important; }
 body.exam-only-mode main { max-width:980px; margin:0 auto; padding:18px; }
 body.exam-only-mode .top-action-toolbar, body.exam-only-mode .page-head .top-action-buttons { display:none !important; }
 body.exam-only-mode .page-head { justify-content:center; text-align:center; }
