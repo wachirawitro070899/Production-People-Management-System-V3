@@ -1,0 +1,6 @@
+V404 Embedded JR Logo Fix
+- ฝังโลโก้ JR แบบ Base64 ใน index.html และ app.js
+- ไม่พึ่งพา path assets จึงไม่เกิดรูปแตกเมื่ออัปโหลด GitHub Pages
+- ใช้โลโก้เดียวกันในหน้าเว็บหลัก Skill Matrix และ Competency Card
+- เพิ่ม CSS ให้โลโก้พอดีกับกรอบและไม่ล้น
+- อัปเดต cache version เป็น V404

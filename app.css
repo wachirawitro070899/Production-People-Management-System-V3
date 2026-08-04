@@ -469,3 +469,8 @@ header .logo img{display:block;width:56px;height:56px;object-fit:contain}
 .wallet-section-view .wallet-card{box-shadow:0 4px 14px rgba(0,45,85,.12)}
 @media(max-width:800px){.card-filter-section{grid-template-columns:1fr!important}.wallet-section-view{grid-template-columns:1fr!important}.brand .logo img{width:48px;height:48px}}
 @media print{header .logo img,.wallet-logo img{-webkit-print-color-adjust:exact!important;print-color-adjust:exact!important}.wallet-pair-label{display:none!important}.wallet-employee-pair{border:0!important;box-shadow:none!important;padding:0!important;background:transparent!important}}
+
+/* V404 embedded logo reliability fix */
+.logo img,.report-logo img,.wallet-logo img{display:block;width:100%;height:100%;object-fit:contain;border-radius:inherit}
+.logo{overflow:hidden;background:#fff}
+.report-logo,.wallet-logo{overflow:hidden;background:#fff}
