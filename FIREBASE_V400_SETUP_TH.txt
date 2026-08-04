@@ -1,0 +1,27 @@
+PPMS V400 - ตั้งค่า Firebase Realtime Database
+
+1) Firebase Console > JRTL-Organization > Realtime Database > Create Database
+2) เลือก Singapore / asia-southeast1
+3) เริ่ม Test mode ชั่วคราว
+4) ตรวจว่า URL เป็น:
+   https://wachirawit-c8582-default-rtdb.asia-southeast1.firebasedatabase.app
+5) Rules สำหรับทดสอบ:
+{
+  "rules": {
+    ".read": true,
+    ".write": true
+  }
+}
+6) อัปโหลดไฟล์ทั้งหมดใน ZIP ขึ้น GitHub Repository เดิม
+7) เปิดเว็บจากเครื่องหลักที่มีรูปครบก่อน ระบบจะอัปโหลดข้อมูลและรูปขึ้น Firebase
+8) เปิดเครื่องอื่นและกด Ctrl+F5
+
+ข้อมูลที่ซิงก์:
+- รายชื่อและรูปพนักงาน (Base64 ย่อขนาด)
+- Skill Matrix / Skill History
+- Training
+- Examination / Examination History
+- การจัดทีมและเครื่องจักร
+- รายการพนักงานที่ลบถาวร
+
+คำเตือน: Test mode เปิดสิทธิ์สาธารณะ ควรเพิ่ม Firebase Authentication และปรับ Rules ก่อนใช้งานจริงระยะยาว

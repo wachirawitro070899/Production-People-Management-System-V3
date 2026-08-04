@@ -1,0 +1,6 @@
+V400 Firebase Realtime Database Full Sync
+- ใช้ Realtime Database เป็นข้อมูลกลาง
+- เก็บรูปพนักงานแบบ Base64 ที่ย่อขนาดแล้ว ไม่ใช้ Firebase Storage
+- ซิงก์พนักงาน รูป Skill Matrix Training Examination และประวัติทุกเครื่อง
+- ยังคง LocalStorage เป็น Cache/Backup
+- ป้องกันรูปว่างจาก Cloud ทับรูปเดิม
