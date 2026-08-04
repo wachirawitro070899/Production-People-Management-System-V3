@@ -1,0 +1,8 @@
+V328 PDF & Excel Only
+- ลบปุ่ม ตั้งค่าพิมพ์/บันทึก PDF และ ดาวน์โหลดข้อมูล ออกจากหัวรายงาน
+- เหลือปุ่มดาวน์โหลด PDF และดาวน์โหลด Excel
+- รองรับ Section Skill Matrix
+- รองรับ Employee Skill Card
+- รองรับ Production Division Organization Chart
+- รองรับ Section Organization Chart
+- PDF ดาวน์โหลดโดยตรง ไม่เปิดหน้าต่าง Print
