@@ -1,0 +1,8 @@
+V325 - Examination History
+- เพิ่มเมนู Examination History สำหรับ Admin
+- แสดงวันเวลา รหัส ชื่อ Section Quarter Level ชุด คะแนน และผล
+- ค้นหาและกรองตาม Section / Quarter ได้
+- ดาวน์โหลด CSV และพิมพ์/PDF ได้
+- หลังพนักงานส่งข้อสอบ แสดงใบสรุปผลทันที
+- เก็บคำตอบ คะแนน และเวลาส่ง
+- ป้องกันการสอบซ้ำตาม Employee + Section + Quarter + Level

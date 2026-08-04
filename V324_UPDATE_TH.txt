@@ -1,0 +1,12 @@
+V324 Employee Examination Only
+
+ลิงก์สำหรับพนักงาน:
+https://<your-site>/?exam=1
+
+- เปิดได้เฉพาะหน้า Employee Examination
+- ซ่อนเมนู Header และ Admin Login
+- กรอกรหัสพนักงานเพื่อเปิดข้อสอบตาม Section / Quarter / Level
+- ระบบกำหนดชุด A/B/C ให้อัตโนมัติ
+- ส่งได้เพียง 1 ครั้งต่อพนักงาน ต่อ Section + Quarter + Level
+- หลังส่งแล้วไม่สามารถเปิดทำซ้ำหรือส่งซ้ำได้
+- การล็อกข้ามทุกเครื่องต้องเปิด Firebase Live Sync

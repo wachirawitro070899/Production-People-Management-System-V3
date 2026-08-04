@@ -306,3 +306,11 @@
     grid-template-columns:42px 1fr auto!important;
   }
 }
+
+/* V324 Employee Examination only link */
+body.exam-only-mode > header, body.exam-only-mode > nav { display:none !important; }
+body.exam-only-mode main { max-width:980px; margin:0 auto; padding:18px; }
+body.exam-only-mode .top-action-toolbar, body.exam-only-mode .page-head .top-action-buttons { display:none !important; }
+body.exam-only-mode .page-head { justify-content:center; text-align:center; }
+body.exam-only-mode .exam-login-panel, body.exam-only-mode .panel { border-radius:14px; }
+.exam-history-filter{display:grid;grid-template-columns:2fr 1fr 1fr auto;gap:10px;align-items:end}.exam-result-receipt{border:2px solid #0f5ca8;border-radius:14px;padding:18px;background:#f7fbff}.exam-result-receipt h3{margin-top:0;color:#0f5ca8}.receipt-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px}.receipt-grid span{background:#fff;border:1px solid #cbd9e8;border-radius:8px;padding:10px;display:flex;flex-direction:column;gap:4px}.pass{color:#087a35}.fail{color:#b42318}@media(max-width:800px){.exam-history-filter,.receipt-grid{grid-template-columns:1fr}}
