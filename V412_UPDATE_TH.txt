@@ -1,0 +1,7 @@
+V412 - แก้รูป Supervisor / Leader หน้า Stamping
+
+- เปลี่ยนโครงสร้างหัวผังให้ใช้รูปพนักงานจริง ไม่ใช้จุดสีขาว
+- บังคับขนาดรูป 48x48 px และแสดงชื่อ/รหัส/ตำแหน่ง
+- เพิ่ม cache version app.js และ app.css เป็น v=412
+
+ให้อัปโหลดไฟล์ทั้งหมดขึ้น GitHub แล้วตรวจว่า index.html, app.js และ app.css ถูกแทนที่ครบ จากนั้นรอ GitHub Pages deploy และกด Ctrl+Shift+R
