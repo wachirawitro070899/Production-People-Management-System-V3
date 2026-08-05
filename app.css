@@ -598,3 +598,17 @@ body.print-matrix .matrix-print-logo{padding:.35mm;box-sizing:border-box;}
 .drive-photo-item span,.drive-photo-item small{display:block;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
 .drive-photo-item span{font-weight:700;font-size:12px}.drive-photo-item small{font-size:11px;color:#64748b}
 .drive-picker-loading,.drive-picker-empty{padding:20px;text-align:center;color:#475569}
+
+/* V409: show employee photos clearly in Stamping chart header */
+.stamp-top-role{min-width:340px;min-height:82px;flex-direction:column;gap:5px;padding:7px 12px 9px}
+.stamp-top-title{font-size:12px;font-weight:900;letter-spacing:.2px}
+.stamp-top-people{display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:8px;width:100%}
+.stamp-top-person{display:flex;align-items:center;gap:8px;min-width:230px;padding:4px 9px;border-radius:8px;background:rgba(255,255,255,.12);cursor:pointer;text-align:left}
+.stamp-top-person:hover,.stamp-top-person:focus{background:rgba(255,255,255,.22);outline:2px solid rgba(255,255,255,.8);outline-offset:1px}
+.stamp-top-person .avatar,.stamp-top-empty .avatar{width:42px;height:42px;min-width:42px;border:2px solid #fff;object-fit:cover;background:#e7eff9;color:#0b3d78;font-size:17px}
+.stamp-top-person strong{display:block;font-size:11px;line-height:1.15;color:#fff}
+.stamp-top-person small{display:block;font-size:8px;margin-top:2px;color:#fff;opacity:.95}
+.stamp-top-empty{display:flex;align-items:center;gap:8px}
+.stamp-top-empty small{font-size:9px}
+@media(max-width:900px){.stamp-top-role{min-width:min(340px,92vw)}}
+@media print{.stamp-top-role{min-height:68px;padding:5px 8px}.stamp-top-person .avatar,.stamp-top-empty .avatar{width:34px;height:34px;min-width:34px}}
