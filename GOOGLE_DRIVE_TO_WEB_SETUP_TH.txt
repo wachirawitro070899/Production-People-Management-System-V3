@@ -1,0 +1,17 @@
+ตั้งค่าดึงรูปจาก Google Drive เข้าเว็บ (V410)
+
+1) เปิด script.google.com แล้วเปิดโปรเจกต์ Apps Script เดิม
+2) นำโค้ดจากไฟล์ google-apps-script-upload.gs ไปแทนโค้ดเดิมทั้งหมด
+3) กด Deploy > Manage deployments
+4) เลือก Deployment เดิม > Edit > Version: New version > Deploy
+   - Execute as: Me
+   - Who has access: Anyone
+5) คัดลอก Web App URL ไปใส่ใน drive-upload-config.js
+6) เปิดเว็บ > แก้ไขพนักงาน > เลือก Section > กด "เปิดรูปในโฟลเดอร์ Drive"
+7) กดรูปที่ต้องการ แล้วกด "บันทึกข้อมูล"
+
+หมายเหตุ
+- ชื่อโฟลเดอร์ใน Drive ต้องตรงกับ Section โดยตัดคำว่า " Section" ออก เช่น CNC Section -> CNC
+- Sorting Section จะอ่านจากโฟลเดอร์ Sorting 1 หรือ Sorting 2 ตามกลุ่มที่เลือก
+- ไฟล์รูปจะถูกตั้งเป็น Anyone with the link / Viewer เพื่อให้เว็บแสดงได้
+- หลังแก้ Apps Script ต้อง Deploy เป็น New version ไม่เช่นนั้นเว็บจะยังใช้โค้ดเวอร์ชันเก่า

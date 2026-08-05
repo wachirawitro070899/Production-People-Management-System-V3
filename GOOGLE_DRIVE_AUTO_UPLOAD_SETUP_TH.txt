@@ -1,0 +1,30 @@
+ตั้งค่าอัปโหลดรูปพนักงานเข้า Google Drive อัตโนมัติ (ทำเพียงครั้งเดียว)
+
+1) เปิด https://script.google.com แล้วกด New project
+2) ลบโค้ดเดิมใน Code.gs แล้วคัดลอกโค้ดทั้งหมดจากไฟล์ google-apps-script-upload.gs ไปวาง
+3) กด Save
+4) กด Deploy > New deployment
+5) Select type เลือก Web app
+6) Execute as เลือก Me
+7) Who has access เลือก Anyone (หรือ Anyone with Google account ตามนโยบายบริษัท)
+8) กด Deploy และอนุญาตสิทธิ์ Google Drive
+9) คัดลอก Web app URL ที่ลงท้ายด้วย /exec
+10) เปิดไฟล์ drive-upload-config.js แล้วแทนที่ข้อความ
+    PASTE_GOOGLE_APPS_SCRIPT_WEB_APP_URL_HERE
+    ด้วย Web app URL จากข้อ 9
+11) อัปโหลดโปรเจกต์เว็บเวอร์ชันนี้ขึ้น Hosting ใหม่
+
+โฟลเดอร์หลักที่ใช้:
+https://drive.google.com/drive/folders/1teHJMKOl5wbmayEehnA-fObS4hQJRT9q
+
+การทำงานหลังตั้งค่า:
+- เข้าเว็บ > Add Employee หรือ Search Employee > แก้ไขข้อมูล/รูป
+- เลือกรูป JPG/PNG/WEBP
+- กด บันทึกข้อมูล
+- เว็บจะย่อรูป อัปโหลดเข้าโฟลเดอร์ของ Section อัตโนมัติ และบันทึกลิงก์ลง Firebase
+- Sorting Section จะเลือกเข้า Sorting 1 หรือ Sorting 2 ตามค่ากลุ่มพนักงาน
+
+หมายเหตุด้านความปลอดภัย:
+- Token ถูกตั้งไว้ตรงกันใน Apps Script และเว็บแล้ว: -xlgBT7v37V0Uw3agtk3V8JdvYdqVCXG
+- หากเปลี่ยน token ต้องแก้ทั้งสองไฟล์ให้ตรงกัน
+- ผู้ใช้เว็บมองเห็น token ได้ จึงควรจำกัดการใช้งานเว็บด้วย Admin Login และนโยบาย Hosting ของบริษัท
