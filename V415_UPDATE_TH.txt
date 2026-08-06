@@ -1,0 +1,7 @@
+V4.15 - แก้ปัญหา Skill กลับค่าเดิมหลัง Refresh
+
+- เปลี่ยน cache version ของ app.js เป็น v415 เพื่อบังคับเบราว์เซอร์โหลดโค้ดล่าสุด
+- เพิ่ม local Skill Override แยกจากข้อมูลพนักงานหลัก
+- เมื่อ Refresh จะนำ Skill ที่มี revision ใหม่สุดกลับมาเสมอ
+- Firebase listener จะ merge ข้อมูลแทนการทับ Skill ในเครื่องทันที
+- ยังคง Auto Upskill ถึง Level 3 และ Level 4-5 ต้องอนุมัติด้วยรหัส 5995
