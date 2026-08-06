@@ -619,3 +619,11 @@ body.print-matrix .matrix-print-logo{padding:.35mm;box-sizing:border-box;}
 .stamp-top-role .stamp-top-person{display:flex!important;align-items:center!important;justify-content:flex-start!important}
 .stamp-top-role .stamp-top-person img.avatar{display:block!important;width:48px!important;height:48px!important;min-width:48px!important;max-width:48px!important;border-radius:50%!important;object-fit:cover!important;opacity:1!important;visibility:visible!important}
 .stamp-top-role .stamp-top-person div.avatar{display:grid!important;width:48px!important;height:48px!important;min-width:48px!important;border-radius:50%!important}
+
+/* Spare manpower for Stamping Group B and C */
+.spare-row{border-top:1px dashed #c48a00;margin-top:3px;color:#9a6500;font-weight:800}
+.spare-row .stamp-assignee-photo .avatar{box-shadow:0 0 0 2px #d89a00}
+.spare-row .stamp-role-name{color:#9a6500}
+.spare-row .stamp-machine-box{background:#fff8df;border-color:#ead08a}
+.spare-row .stamp-machine-box b{color:#9a6500}
+.stamp-summary{grid-template-columns:180px repeat(5,1fr)}
