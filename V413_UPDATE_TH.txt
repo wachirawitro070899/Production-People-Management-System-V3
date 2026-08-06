@@ -1,0 +1,7 @@
+V4.13 - Automatic Skill Upgrade & Persistent Sync
+
+1. เมื่อพนักงานสอบผ่านเกณฑ์ 80% ระบบจะอัปสกิลอัตโนมัติจาก Level ที่สอบไปยัง Level ถัดไป (สูงสุด Level 5)
+2. อัปเดต currentSkillLevel, Skill Matrix ทุกหัวข้อของ Section, วันที่อัปเดต, Quarter และประวัติ Skill โดยอัตโนมัติ
+3. หากสอบไม่ผ่าน สกิลจะไม่เปลี่ยน
+4. แก้ปัญหาค่า Skill กลับเป็น Level 1 หลัง Refresh โดยป้องกัน Firebase snapshot เก่าทับค่าระหว่างรอซิงก์ และลดเวลารอซิงก์เหลือ 150 ms
+5. ผลสอบและการเปลี่ยน Skill ถูกบันทึกพร้อมกันทั้ง Local Storage และ Firebase
