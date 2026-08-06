@@ -1,0 +1,9 @@
+V419 - Skill Matrix A4/A3 Print Fix
+
+- ซ่อนแถบเมนู ปุ่ม และหัวข้อหน้าเว็บทั้งหมดตอนพิมพ์ Skill Matrix
+- พิมพ์เฉพาะ Section Skill Matrix ชิดขอบบน
+- รองรับ A4 Landscape และ A3 Landscape จริง
+- A4 ปรับตาราง ฟอนต์ รูป และเกณฑ์ให้พอดีความกว้าง
+- PDF Skill Matrix เลือก A4 หรือ A3 ได้
+- จำขนาดกระดาษล่าสุดใน session
+- อัปเดต cache เป็น app.js?v=419

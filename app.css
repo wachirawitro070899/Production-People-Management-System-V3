@@ -627,3 +627,50 @@ body.print-matrix .matrix-print-logo{padding:.35mm;box-sizing:border-box;}
 .spare-row .stamp-machine-box{background:#fff8df;border-color:#ead08a}
 .spare-row .stamp-machine-box b{color:#9a6500}
 .stamp-summary{grid-template-columns:180px repeat(5,1fr)}
+
+
+/* V419: true A4/A3 Skill Matrix printing */
+.pdf-capture{box-shadow:none!important;border-radius:0!important;margin:0!important}
+.pdf-capture.pdf-a4{width:1120px!important}
+.pdf-capture.pdf-a3{width:1580px!important}
+.pdf-capture .skill-matrix-table{width:100%!important;min-width:0!important;table-layout:fixed!important}
+@media print{
+  body.print-matrix header,
+  body.print-matrix nav,
+  body.print-matrix .top-action-toolbar,
+  body.print-matrix .page-head,
+  body.print-matrix .matrix-filter,
+  body.print-matrix #statusbar,
+  body.print-matrix .modal-backdrop{display:none!important}
+  body.print-matrix{margin:0!important;padding:0!important;background:#fff!important}
+  body.print-matrix main{padding:0!important;margin:0!important;width:100%!important;max-width:none!important}
+  body.print-matrix main>*:not(.matrix-report){display:none!important}
+  body.print-matrix .matrix-report{display:block!important;margin:0!important;width:100%!important;max-width:none!important;border-radius:0!important;box-shadow:none!important;overflow:visible!important;transform:none!important}
+  body.print-matrix .matrix-report>.matrix-print-header{display:none!important}
+  body.print-matrix .matrix-report>.report-title{display:grid!important}
+  body.print-matrix .skill-table-wrap{overflow:visible!important}
+  body.print-matrix .skill-matrix-table{width:100%!important;min-width:0!important;table-layout:fixed!important}
+  body.print-matrix .skill-matrix-table th,
+  body.print-matrix .skill-matrix-table td{overflow-wrap:anywhere!important;word-break:break-word!important}
+  body.print-matrix.print-paper-a4 .skill-matrix-table{font-size:6.4px!important}
+  body.print-matrix.print-paper-a4 .skill-matrix-table th,
+  body.print-matrix.print-paper-a4 .skill-matrix-table td{padding:2.2px 1.5px!important;font-size:6.4px!important}
+  body.print-matrix.print-paper-a4 .skill-matrix-table .emp-col{min-width:0!important;width:18%!important}
+  body.print-matrix.print-paper-a4 .skill-matrix-table .avatar{width:26px!important;height:26px!important}
+  body.print-matrix.print-paper-a4 .level-box{width:22px!important;height:22px!important;font-size:7px!important}
+  body.print-matrix.print-paper-a4 .rank-badge{min-width:46px!important;padding:3px 4px!important;font-size:7px!important}
+  body.print-matrix.print-paper-a4 .report-title{padding:4px 7px!important;grid-template-columns:30px 1fr auto!important}
+  body.print-matrix.print-paper-a4 .report-title h2{font-size:13px!important}
+  body.print-matrix.print-paper-a4 .report-logo{width:26px!important;height:26px!important;border-width:2px!important;font-size:10px!important}
+  body.print-matrix.print-paper-a4 .doc-box{padding:3px 5px!important;font-size:6px!important}
+  body.print-matrix.print-paper-a4 .skill-legend{padding:4px 6px!important;gap:3px!important}
+  body.print-matrix.print-paper-a4 .skill-legend span{padding:2px 4px!important;font-size:6px!important}
+  body.print-matrix.print-paper-a4 .criteria-grid{padding:4px!important}
+  body.print-matrix.print-paper-a4 .acceptance-head,
+  body.print-matrix.print-paper-a4 .acceptance-row{padding:2px 4px!important;font-size:6px!important;grid-template-columns:45px 45px 1fr!important}
+  body.print-matrix.print-paper-a4 .signature-row{padding:5px!important;font-size:6px!important}
+  body.print-matrix.print-paper-a3 .skill-matrix-table{font-size:7.5px!important}
+  body.print-matrix.print-paper-a3 .skill-matrix-table th,
+  body.print-matrix.print-paper-a3 .skill-matrix-table td{padding:4px 3px!important;font-size:7.5px!important}
+  body.print-matrix.print-fit-width .matrix-report{zoom:1!important}
+}
