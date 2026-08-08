@@ -1,0 +1,7 @@
+PPMS V435 - Thailand Time 24H Input
+
+- ช่องเวลา Attendance ของ Admin เปลี่ยนเป็นรูปแบบ 24 ชั่วโมง HH:MM
+- ไม่ใช้ native time picker ที่อาจแสดง AM/PM ตามมือถือ/เบราว์เซอร์
+- ตัวอย่าง 07:50, 08:05, 14:05, 20:00, 00:15
+- ตรวจสอบรูปแบบเวลา 00:00-23:59 ก่อนบันทึก
+- Logic Attendance ใช้ Asia/Bangkok (UTC+7) ตามเดิม
