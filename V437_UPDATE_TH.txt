@@ -1,0 +1,13 @@
+PPMS V437 - Attendance KPI Dashboard & Test Data Cleanup
+
+- ลบคอลัมน์ Check-out ครบ ออกจาก Attendance & KPI
+- เพิ่ม Dashboard วิเคราะห์ On-time KPI, ตรงเวลา/สาย/ลา/ขาด
+- กราฟเปรียบเทียบ KPI ราย Section และพนักงาน KPI ต่ำที่ควรติดตาม
+- ลบ Attendance ได้ทีละรายการ
+- ลบ Attendance ทั้งหมดของพนักงาน 1 รหัสได้
+- ล้างข้อมูลตามปี/แผนกที่เลือกได้
+- ล้าง Attendance ทุกปีทุกแผนกได้
+- ล้างการผูกเครื่อง 1 เครื่อง = 1 พนักงานทั้งหมดได้
+- ปุ่มล้างข้อมูลทดลองทั้งหมด: Attendance + Device Binding (ต้องพิมพ์ RESET)
+- การล้างข้อมูลทดลองไม่ลบ Employee Master, Training, Examination, Skill Matrix
+- การลบ/ล้างซิงก์ไป Firebase
