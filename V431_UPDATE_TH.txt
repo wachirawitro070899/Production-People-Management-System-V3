@@ -1,0 +1,9 @@
+PPMS V431 - Attendance GPS Accuracy Fix
+
+- แยก Geofence Radius ออกจาก GPS Accuracy อย่างชัดเจน
+- รัศมีเช็คชื่อยังตั้งได้ 10-150 เมตร
+- การอนุญาต/ปฏิเสธเช็คชื่อใช้ระยะจากหมุดโรงงานเทียบกับรัศมีที่ Admin ตั้ง
+- GPS Accuracy เช่น +/-84 เมตร จะไม่ปฏิเสธการเช็คชื่อโดยตัวมันเอง
+- เก็บ GPS Accuracy ไว้ใน Attendance record เพื่อใช้ตรวจสอบย้อนหลัง
+- ถ้าอยู่นอกรัศมี ระบบยังปฏิเสธตามปกติและแสดงทั้งระยะกับ GPS Accuracy
+- เพิ่ม cache version app.js v431
