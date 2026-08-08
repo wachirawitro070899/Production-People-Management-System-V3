@@ -308,26 +308,7 @@
 }
 
 /* V324 Employee Examination only link */
-body.exam-only-mode > nav {
-  display:flex !important;
-  justify-content:center;
-  gap:10px;
-  position:sticky;
-  top:0;
-  z-index:30;
-  padding:10px 14px;
-  background:#eaf2fa;
-  border-bottom:1px solid #d3e0ec;
-}
-body.exam-only-mode > nav button {
-  min-width:150px;
-  padding:11px 18px;
-  font-size:14px;
-}
-body.exam-only-mode > nav button.active {
-  background:#1f5684;
-  color:#fff;
-}
+body.exam-only-mode > nav { display:none !important; }
 body.exam-only-mode > header {
   display:flex !important;
   position:fixed;

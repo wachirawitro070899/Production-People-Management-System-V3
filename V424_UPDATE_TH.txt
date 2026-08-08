@@ -1,0 +1,12 @@
+PPMS V424 - Attendance + Examination Restored
+
+แก้ไข:
+- แก้เมนูโหมดพนักงานที่ถูก CSS ซ่อน ทำให้ Examination ดูเหมือนหาย
+- โหมดพนักงานแสดงแท็บ Attendance และ Examination
+- ระบบ Training / Examination / Examination History / Skill Matrix / Evaluation Plan เดิมยังอยู่ครบ
+- Attendance ยังคงตรวจ Employee ID และ GPS โรงงานไม่เกิน 50 เมตร
+- แจ้งเข้าสายล่วงหน้าได้จากทุกที่ ไม่บังคับ GPS
+- หลัง 08:05 เช็คอินต้องระบุสาเหตุเข้าสาย
+- ปรับ cache version เป็น V424 เพื่อบังคับ browser โหลด app.css/app.js ใหม่
+
+หลังอัปโหลดขึ้น GitHub/Hosting ให้กด Ctrl+F5 หรือเคลียร์ cache หนึ่งครั้ง
