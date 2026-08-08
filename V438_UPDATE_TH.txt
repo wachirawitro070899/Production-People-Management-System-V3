@@ -1,0 +1,15 @@
+PPMS V438 - Test Data Cleanup Panel
+
+เพิ่มช่อง 🧹 ล้างข้อมูลทดลอง ในหน้า Attendance & KPI
+- ล้าง Attendance ทั้งหมด
+- ล้าง Examination History / คะแนน / สถานะอนุมัติ
+- ล้าง Device Binding
+- ล้างข้อมูลทดลองทั้งหมดในครั้งเดียว
+
+ข้อมูลที่ไม่ถูกลบ:
+- รายชื่อพนักงาน
+- คลังข้อสอบ / Exam Question Bank
+- Training Master
+- Skill Master / Skill Matrix master data
+
+ทุกการล้างข้อมูลจะซิงก์ Firebase เพื่อให้เครื่องอื่นเห็นผลเหมือนกัน
