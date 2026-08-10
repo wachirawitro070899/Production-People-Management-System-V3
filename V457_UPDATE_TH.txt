@@ -1,0 +1,18 @@
+V457 - Section Organization Chart Examination Alert
+
+เพิ่มสถานะ Plan Examination รายไตรมาสในหน้า Section Organization Chart เท่านั้น
+
+Plan:
+Q1 = 10-20 มี.ค.
+Q2 = 10-20 มิ.ย.
+Q3 = 10-20 ก.ย.
+Q4 = 10-20 ธ.ค.
+
+กติกาไฟสถานะ:
+- ก่อนวันเริ่ม Plan มากกว่า 7 วัน: ไม่แสดงไฟ (หากยังไม่สอบ)
+- เหลือ 4-7 วัน และยังไม่มีผลสอบของไตรมาส/ปีนั้น: ไฟเหลืองกระพริบ
+- เหลือ 0-3 วัน หรือเลยวันเริ่ม Plan แล้ว และยังไม่มีผลสอบ: ไฟแดง
+- มีประวัติ Examination ในไตรมาสและปีปัจจุบันแล้ว: ไฟเขียว
+
+สถานะนี้แสดงเฉพาะหน้า Section Organization Chart
+ไม่เพิ่มใน Production Division Organization Chart เพื่อไม่ทับสถานะ Attendance Live
