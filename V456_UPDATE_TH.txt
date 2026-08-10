@@ -1,0 +1,14 @@
+V456 Data Safe
+
+- Firebase ppms เป็นข้อมูลหลักของระบบเหมือนเดิม
+- ทุกครั้งที่เช็คชื่อ/แก้รายการ Attendance จะสำรองซ้ำเข้า ppmsArchive/attendance แยกจากข้อมูลหลัก
+- เปิด V456 ครั้งแรกจะ Backfill Attendance ที่มีอยู่แล้วเข้า Archive อัตโนมัติ
+- Export Center เพิ่มปุ่ม “สำรอง Attendance ขึ้น Firebase” เพื่อสร้าง Snapshot แบบตั้งใจ
+- Export Center เพิ่มปุ่ม “กู้คืน Attendance จากคลัง” เพื่อรวมรายการเก่ากลับเข้าข้อมูลหลักโดยไม่ลบรายการใหม่
+- Backup JSON ยังดาวน์โหลดได้เหมือนเดิม และระบุ Version V456
+- การ Deploy/อัปเดต GitHub Pages จะโหลด Firebase ก่อน ไม่ใช้ข้อมูลฝังในไฟล์ไปแทนที่ฐานข้อมูลเดิม
+
+คำแนะนำก่อนเริ่มทดลอง:
+1. Login Admin > Export Center > ดาวน์โหลด Backup JSON 1 ชุด
+2. กด “สำรอง Attendance ขึ้น Firebase” 1 ครั้ง
+3. จากนั้นสามารถอัปเดตไฟล์เว็บเวอร์ชันใหม่ได้ โดยไม่ควรเปลี่ยน Firebase project/config
