@@ -1,0 +1,13 @@
+V449 - Firebase Employee Master
+
+แก้ปัญหารายชื่อพนักงานที่ลบแล้วกลับมาอีกหลังอัปเดต GitHub Pages
+
+การเปลี่ยนแปลง:
+- Firebase เป็นแหล่งข้อมูลรายชื่อพนักงานหลักเมื่อเชื่อมต่อสำเร็จ
+- ไม่ merge รายชื่อจาก employees-data.js เข้ากับ Firebase อีก
+- employees-data.js ถูกล้างรายชื่อออก เหลือเพียง seed ว่าง
+- การ Refresh / อัปเดต GitHub จะไม่สร้างรายชื่อเก่ากลับมา
+- ปิดการ Reset รายชื่อกลับจาก seed และปิดการ Publish employees-data.js แบบเดิม
+- localStorage ใช้เป็น cache/offline fallback เท่านั้น
+
+หมายเหตุ: ก่อนอัปโหลดเวอร์ชันนี้ ควรตรวจสอบว่า Firebase ปัจจุบันมีรายชื่อพนักงานล่าสุดที่ต้องการเก็บอยู่แล้ว
