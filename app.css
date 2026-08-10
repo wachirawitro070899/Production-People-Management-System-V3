@@ -741,3 +741,9 @@ body.print-matrix .matrix-print-logo{padding:.35mm;box-sizing:border-box;}
 .org-exam-legend>span{display:flex;align-items:center;gap:5px}.org-exam-legend .exam-plan-label{margin-right:auto;color:#174e7e}.org-exam-legend b{font-weight:800}
 .stamp-duty-card.section-exam-person,.stamp-top-person.section-exam-person{position:relative}
 @media print{.org-exam-light{box-shadow:none;-webkit-print-color-adjust:exact;print-color-adjust:exact}.org-exam-warning i{animation:none}.org-exam-legend{display:none!important}}
+
+/* V458 Examination status preview for Section Organization Chart */
+.org-exam-legend.exam-preview-active{border-color:#f59e0b;background:#fffdf5}
+.org-exam-legend .exam-plan-label em{font-style:normal;font-size:10px;letter-spacing:.5px;background:#f59e0b;color:#fff;padding:2px 6px;border-radius:999px;margin-left:5px}
+.exam-preview-btn{margin-left:auto;white-space:nowrap}
+.exam-preview-note{width:100%;color:#92400e;font-weight:700;text-align:right}
