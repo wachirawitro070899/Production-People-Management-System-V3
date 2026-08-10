@@ -1,0 +1,8 @@
+V459 - Section Examination Status Separation
+
+- Section Organization Chart แสดงเฉพาะสถานะ Plan Examination
+- ซ่อน Attendance / เช็คชื่อใน Section Organization Chart แบบบังคับด้วย CSS
+- Production Division Organization Chart ยังคงแสดง Attendance แบบ Live ตามเดิม
+- เพิ่มเส้นขอบสีของสถานะสอบให้เห็นชัด: เหลือง/แดง/เขียว
+- โหมด Preview ยังคงใช้ได้และไม่แก้ข้อมูลจริง
+- เปลี่ยน cache version ของ app.js/app.css เป็น v=459 เพื่อป้องกัน browser โหลดไฟล์เก่า
