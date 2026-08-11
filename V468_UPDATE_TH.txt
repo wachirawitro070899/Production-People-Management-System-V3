@@ -1,0 +1,8 @@
+V468 - Active Shift Organization Chart
+
+- Production Division Organization Chart จัดพนักงานตามกะของวันจาก Shift Schedule 4 รอบ
+- กะปัจจุบันขึ้นด้านบนอัตโนมัติ: Day 07:00-18:59, Night 19:00-06:59
+- กะตรงข้ามยังแสดงด้านล่างเพื่อดูโครงสร้างครบทุกคน
+- Sorting Section แยกเป็น Sorting 1 และ Sorting 2 ในหน้า Division Organization Chart
+- สถานะ Attendance ยังคงใช้กะตามแผนจริง จึงไม่ตีคนกะดึกเป็นขาดงานก่อนถึงเวลา
+- ไม่แก้/ลบข้อมูล Firebase เดิม และคงระบบ Preserve All Data + 4 Round Shift Planner
