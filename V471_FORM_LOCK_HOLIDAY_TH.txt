@@ -1,0 +1,15 @@
+V471 - Form Lock + Holiday Calendar
+
+1) แก้อาการช่องกรอกข้อมูล/Dropdown เด้งออก
+- หน้า Add Employee และฟอร์มที่ Admin กำลังกรอกจะไม่ถูก Firebase render ทับ
+- หน้าตั้งค่า/จัดการจะไม่ Live Render จาก Firebase ระหว่างใช้งาน
+- ยกเลิกการบังคับ render ตอน focusout/change
+- เพิ่ม guard ใน render() ป้องกัน DOM ถูกสร้างใหม่ขณะที่กำลังพิมพ์หรือเลือก dropdown
+
+2) เพิ่ม Holiday Calendar
+- Attendance & KPI > วันหยุด
+- Admin เพิ่มวันที่และชื่อวันหยุดได้
+- วันหยุดไม่สร้าง Auto Absent และไม่หัก KPI
+- ถ้าวันนั้นเคยถูกสร้าง Auto Absent ไว้ ระบบลบ Auto Absent ของวันนั้นเมื่อเพิ่มวันหยุด
+- ถ้าพนักงานมาทำ OT ในวันหยุดและเช็คชื่อ ระบบยังบันทึก Attendance และแสดงว่าทำงานตามปกติ
+- วันหยุดเก็บใน Firebase/Backup และอยู่ต่อเมื่ออัปเดตเวอร์ชัน
