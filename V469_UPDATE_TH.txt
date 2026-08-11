@@ -1,0 +1,7 @@
+V469 - Separate Sorting 1 / Sorting 2 Shift Planning
+
+- หน้าแผนกะ 4 รอบ แยก Sorting 1 Section และ Sorting 2 Section เป็นคนละรายการ
+- แต่ละกลุ่มแสดงเฉพาะพนักงานของกลุ่มนั้น ทำให้ตั้ง Day/Night 4 รอบแยกกันได้
+- ข้อมูลพนักงานเดิมยังคง Section = Sorting Section และใช้ sortingGroup แยกกลุ่ม จึงไม่กระทบข้อมูลเดิม
+- Attendance และ Organization Chart ยังคงอ่านกะรายพนักงานตามวันที่จริง
+- Preserve Firebase/ข้อมูล Admin/พนักงานเดิมทั้งหมด
