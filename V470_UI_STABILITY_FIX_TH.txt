@@ -1,0 +1,17 @@
+V470 - UI Stability / Firebase Debounce Fix
+
+แก้ปัญหา:
+- Dropdown Section เปิดแล้วเด้ง/ปิดเอง
+- หน้าเพิ่ม/แก้ไขพนักงานถูก Refresh ระหว่างกรอกข้อมูล
+- ระบบกระตุกเมื่อมี Attendance หรือข้อมูลจาก Firebase เปลี่ยน
+
+การแก้ไขหลัก:
+1. Firebase Live Sync ยังรับข้อมูลตามปกติ แต่ไม่ render หน้าใหม่ขณะผู้ใช้กำลังใช้งาน input/select/textarea
+2. หน้า Employee Form ถูกป้องกันไม่ให้ remote refresh เขียนทับระหว่างกรอกข้อมูล
+3. Remote render ใช้ debounce เพื่อลดการ render ซ้ำถี่ ๆ
+4. การเขียน local cache จาก remote sync ถูกหน่วงและรวมหลาย event เพื่อลดอาการกระตุก
+5. Dropdown ที่มีตัวเลือกไม่มากจะใช้ native select โดยตรง เพื่อลด DOM และ event ที่ไม่จำเป็น
+6. Auto refresh หน้า Dashboard จะไม่ทำงานขณะที่ผู้ใช้กำลังเลือก/กรอกข้อมูล
+7. อัปเดต cache version app.js/app.css เป็น 470
+
+ข้อมูล Firebase, Attendance, Employee Master, Shift Schedule และข้อมูล Admin เดิมไม่ถูกลบ
