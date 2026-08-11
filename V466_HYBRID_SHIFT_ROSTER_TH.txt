@@ -1,0 +1,27 @@
+V466 - Hybrid Shift Roster
+
+เพิ่มระบบจัดตารางกะตามช่วงวันที่ โดยไม่แก้ Employee Master ทุก 2 สัปดาห์
+
+1. Stamping Section
+- กำหนดกะทั้ง Team A / Team B ได้ครั้งเดียว
+- สามารถ Override รายบุคคลได้หากมีกรณีพิเศษ
+
+2. Sorting / Welding / Section อื่น
+- กำหนดกะเฉพาะพนักงานที่ต้องสลับได้
+- คนที่ไม่กำหนดจะใช้กะ Default จาก Employee Master
+
+3. ลำดับการเลือกกะ
+- รายบุคคลตามช่วงวันที่ (สูงสุด)
+- ทีม Stamping ตามช่วงวันที่
+- Default Shift ใน Employee Master
+
+4. Attendance
+- เช็คกะตามวันที่จริงก่อนอนุญาตเช็คชื่อ
+- กะดึกหลังเที่ยงคืนยังผูกกับวันทำงานก่อนหน้า
+- บันทึก shift ลง Attendance Record ณ วันที่เช็คชื่อ
+- รายงานย้อนหลังไม่เปลี่ยนเมื่อมีการจัดกะรอบใหม่
+
+5. Data Safety
+- Shift Roster เก็บใน localStorage และ Firebase ppms/shiftSchedules
+- รวมอยู่ใน Full Backup และระบบ Preserve Data
+- ใช้ tombstone เมื่อแก้ตารางรอบเดิมเพื่อไม่ให้ข้อมูลเก่าจาก Firebase กลับมา
