@@ -1,0 +1,19 @@
+V463 - Preserve Existing Data / อัปเดตเวอร์ชันโดยไม่ลบข้อมูลเดิม
+
+สิ่งที่เพิ่ม
+1. ใช้ Firebase path เดิม (ppms) ต่อเนื่องทุกเวอร์ชัน
+2. ก่อนซิงก์ V463 ครั้งแรก จะสร้าง Snapshot ของข้อมูลเดิมไว้ที่ ppmsArchive/versionBackups/V463-Preserve-Existing-Data
+3. การ Save ทั่วไปเปลี่ยนจากการเขียนทับทั้งก้อน เป็นการ Merge กับข้อมูลที่มีอยู่บน Firebase
+4. Attendance รวมข้อมูลด้วย employeeId + date และเลือก record ที่ใหม่กว่า
+5. Employees รวมตามรหัสพนักงานและ updatedAt/skill revision พร้อมเคารพรายการที่ถูกลบโดย Admin
+6. Evaluations / Training / Exam Results รวมข้อมูลเก่าและใหม่ ลดความเสี่ยงประวัติหายเมื่อ Deploy ไฟล์เว็บใหม่
+7. Exam Question Bank รักษาข้อมูลเดิมบน Firebase และเติมข้อมูลที่มีเฉพาะในเครื่อง
+8. Attendance Settings และ Device Binding จะไม่ถูกรีเซ็ตเพียงเพราะเปลี่ยนเวอร์ชันเว็บ
+
+ผลที่ต้องการ
+- อัปโหลด index.html/app.js/app.css เวอร์ชันใหม่บน GitHub Pages ได้ โดยข้อมูลทดสอบเดิมยังอยู่ใน Firebase
+- การ Refresh / เปลี่ยนเครื่อง / เปลี่ยนเวอร์ชัน ไม่ควรทำให้ Attendance, พนักงาน, ผลสอบ และข้อมูลหลักหาย
+
+ข้อควรระวัง
+- ปุ่มลบ/ล้างข้อมูลของ Admin ยังทำงานตามปกติเมื่อผู้ใช้ยืนยันเอง
+- ห้ามเปลี่ยน Firebase project/databaseURL หากต้องการใช้ฐานข้อมูลเดิมต่อเนื่อง

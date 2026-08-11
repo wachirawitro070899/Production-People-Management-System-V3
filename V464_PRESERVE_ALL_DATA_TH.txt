@@ -1,0 +1,27 @@
+V464 - Preserve All Admin + Employee Data
+
+เป้าหมาย
+- อัปเดตเวอร์ชันเว็บโดยไม่ลบข้อมูลที่พนักงานกรอก
+- อัปเดตเวอร์ชันเว็บโดยไม่ลบข้อมูลที่ Admin เพิ่ม แก้ไข หรือกำหนดค่าไว้
+
+ข้อมูลที่รักษาไว้ใน Firebase
+- Employee Master / รูป / ตำแหน่ง / Section / กะ / การจัดเครื่อง
+- Skill Matrix / Skill History / Skill Override
+- Evaluation / Training
+- Exam Results / Custom Exam Question Bank / Approval
+- Attendance / Leave / Late / Absent / Check-in / Check-out
+- Attendance Settings / GPS Factory Pin / Radius / GPS Accuracy / Work Time
+- Device Binding
+- Deleted Employee IDs เพื่อไม่ให้รายชื่อที่ลบกลับมาเอง
+- Top-level ข้อมูลเดิมอื่น ๆ ใน ppms จะไม่ถูกทิ้งเมื่ออัปเดตเวอร์ชัน
+
+ความปลอดภัยข้อมูล
+1. Firebase ppms เป็นข้อมูลหลัก
+2. ก่อน merge เวอร์ชันใหม่ ระบบสร้าง snapshot ทั้ง ppms ที่ ppmsArchive/versionBackups/V464-Preserve-All-Admin-Employee-Data
+3. การ sync ใช้ transaction + merge แทนการเขียนทับ root ทั้งก้อน
+4. Local auto backup เก็บทั้งข้อมูล Admin และ Employee
+5. Skill Overrides ถูกเก็บใน Firebase โดยตรงเพิ่มจาก V463
+
+หมายเหตุ
+- การกดปุ่มลบ/ล้างข้อมูลโดย Admin โดยตั้งใจยังทำงานตามปกติ
+- ต้องใช้ Firebase project/databaseURL เดิมเพื่อให้ข้อมูลต่อเนื่องข้ามเวอร์ชัน
